@@ -4,29 +4,32 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Lab3
+namespace ChooseMediaDisplay
 {
     /// <summary>
-    /// Stores information for a movie, derived from media.
+    /// Stores information for a book, derived from media.
+    /// Has two special properties, Author and summary.
+    /// Has two inherited properties from media, title and year.
+    /// The smmary can be encrypted and decrypted.
+    /// 
     /// </summary>
-    class Movie : Media, IEncryptable
+    class Book : Media, IEncryptable
     {
-        public string Director { get; protected set; }
+        public string Author { get; protected set;  }
         public string Summary { get; protected set; }
 
-        public Movie(string title, int year, string director, string summary) : base(title, year)
+        public Book(string title, int year, string author, string summary) : base(title, year)
         {
-            Director = director;
+            Author = author;
             Summary = summary;
         }
-
         #region IEncryptable
 
 
         /// <summary>
-        /// Uses Rot13 algorithm to encrypt string
+        /// Uses Rot13 algorithm to encrypt string.
         /// </summary>
-        /// <returns> The encrypted string</returns>
+        /// <returns></returns>
         public string Encrypt()
         {
             return Decrypt();
@@ -34,11 +37,12 @@ namespace Lab3
 
 
         /// <summary>
-        ///  uses Rot13 algorithm to encrypt string
+        /// Uses Rot 13 algorithm to decrypt string.
         /// </summary>
-        /// <returns>The encrypted string</returns>
+        /// <returns></returns>
         public string Decrypt()
         {
+
             char[] charArr = Summary.ToCharArray();
             for (int i = 0; i < charArr.Length; i++)
             {

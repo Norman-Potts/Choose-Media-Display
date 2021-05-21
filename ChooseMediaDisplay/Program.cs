@@ -1,6 +1,4 @@
-﻿
-
-/** 
+﻿/** 
     Choose-Media-Display
     Lab 3 for Advanced Programmming in .NET
     Created by Norman Potts
@@ -17,6 +15,9 @@
         5. Search all media by title.
         When user enters number six the program will exit.
 */
+
+
+
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -24,7 +25,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Lab3
+namespace ChooseMediaDisplay
 {
     /// <summary>
     ///  Lab 3 for Programming in .NET

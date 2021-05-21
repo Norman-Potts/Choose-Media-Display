@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Lab3
+namespace ChooseMediaDisplay
 {
     /// <summary>
     /// The class implementing the interface will be able to use methods Encrypt or Decrypt.
